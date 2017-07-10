@@ -1,0 +1,7 @@
+<%= form_for @item do |form| %>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+  <% if @item.new_record? %>
+    <%= form.submit 'Add it!' %>
+  <% end %>
+<% end %>
