@@ -6,16 +6,11 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to items_path, :notice => 'Item added!'
+      redirect_to root_path, :notice => 'Item added!'
     else
       render action: :new
     end
   end
-
-  def index
-    @item = Item.all
-  end
-
 
   private
 
