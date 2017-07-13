@@ -6,6 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src = 'https://use.fontawesome.com/44f5f8d11c.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans+Condensed:300" rel="stylesheet">
   </head>
 
   <body>
@@ -13,7 +15,7 @@
     <% if flash[:notice].present? %>
       <p class='notice'><%= flash[:notice] %></p>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>

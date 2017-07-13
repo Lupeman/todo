@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
   def show
-      @items = Item.all
+      @items = Item.all.reverse
   end
 end

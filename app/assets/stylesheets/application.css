@@ -17,17 +17,66 @@
   color: green;
 }
 
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+}
 table {
   border: 1px solid #000;
+  width: 300px;
 }
 table th  {
   font-size: 30px;
-  background-color:#fff;
+}
+
+thead {
+  color: #000;
+  font-family: 'Abril Fatface', cursive;
+}
+
+tbody {
+  font-size: 20px;
+}
+thead tr {
+  display: grid;
+}
+tr {
+  display: flex;
+  flex-direction: row;
 }
 td {
-  color: #fff;
-  padding: 8px 20px;
+  padding: 8px 15px;
 }
+
+td:nth-child(odd){
+  width: 90%;
+}
+
 tr:nth-child(odd) {
   background: #006699;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  color: #000;
+}
+
+i {
+  visibility: hidden;
+}
+
+tr:hover i {
+  visibility: visible;
+  cursor:pointer;
+}
+
+tr:nth-child(even):hover i {
+  color: #000;
+}
+
+tr:nth-child(odd):hover i {
+  color: #fff;
 }

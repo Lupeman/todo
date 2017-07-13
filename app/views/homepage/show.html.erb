@@ -5,15 +5,15 @@
   <table>
     <thead>
       <tr>
-        <th colspan='2'>ToDo</th>
-        <th></th>
+        <th>ToDo</th>
       </tr>
     </thead>
     <tbody>
       <% @items.each do |item| %>
         <tr>
           <td><%= item.description %></td>
-          <td><%= button_to 'Delete', item_path(item), method: 'delete' %></td>
+          <td><%= link_to ('<i class="fa fa-trash-o"></i>').html_safe, item_path(item), method: 'delete' %>
+          </td>
         </tr>
       <% end %>
     </tbody>
