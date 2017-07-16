@@ -15,4 +15,13 @@ RSpec.describe 'The Homepage' do
     expect(page).to have_content 'Buy apples'
     expect(page).to have_content 'Make pizza'
   end
+
+  it 'lets the user delete an item' do
+    Item.create!(description: 'Wash dog')
+    Item.create!(description: 'Buy apples')
+    Item.create!(description: 'Make pizza')
+    visit '/'
+    page.first('.fa.fa-trash-o').click
+    expect(page).to have_content 'Item has been successfully deleted'
+  end
 end
