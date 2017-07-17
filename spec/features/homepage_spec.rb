@@ -22,6 +22,6 @@ RSpec.describe 'The Homepage' do
     Item.create!(description: 'Make pizza')
     visit '/'
     page.first('.fa.fa-trash-o').click
-    expect(page).to have_content 'Item has been successfully deleted'
+    expect(page).to have_content 'Item has been successfully deleted!'
   end
 end

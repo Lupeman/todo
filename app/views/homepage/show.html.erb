@@ -2,19 +2,18 @@
 
 <%= link_to 'Add Item', new_item_path %>
 
-  <table>
-    <thead>
+<table>
+  <thead>
+    <tr>
+      <th>ToDo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
       <tr>
-        <th>ToDo</th>
+        <td><%= item.description %></td>
+        <td><%= link_to ('<i class="fa fa-trash-o"><p class="delete">delete</p></i>').html_safe, item_path(item), method: 'delete' %></td>
       </tr>
-    </thead>
-    <tbody>
-      <% @items.each do |item| %>
-        <tr>
-          <td><%= item.description %></td>
-          <td><%= link_to ('<i class="fa fa-trash-o"></i>').html_safe, item_path(item), method: 'delete' %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
+    <% end %>
+  </tbody>
 </table>
