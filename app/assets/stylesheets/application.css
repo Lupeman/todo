@@ -23,10 +23,12 @@ body {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
+  text-align: center;
 }
 table {
   border: 1px solid #000;
-  width: 300px;
+  width: 350px;
+  margin: 0 auto;
 }
 table th  {
   font-size: 30px;
@@ -55,13 +57,18 @@ td:nth-child(odd){
   width: 90%;
 }
 
+td:nth-child(even){
+  text-align: center;
+}
+
 tr:nth-child(odd) {
-  background: #006699;
+  background: #A8216B;
   color: #fff;
 }
 
 tr:nth-child(even) {
-  color: #000;
+  color: #fff;
+  background-color: #EC1B4B;
 }
 
 i {
@@ -73,10 +80,13 @@ tr:hover i {
   cursor:pointer;
 }
 
-tr:nth-child(even):hover i {
-  color: #000;
+tr:hover i {
+  color: #fff;
 }
 
-tr:nth-child(odd):hover i {
-  color: #fff;
+.delete {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
 }

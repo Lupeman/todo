@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find(params[:id])
     item.destroy
-    redirect_to root_path, :notice => 'Item has successfully been deleted!'
+    redirect_to root_path, :notice => 'Item has been successfully deleted!'
   end
 
   private
